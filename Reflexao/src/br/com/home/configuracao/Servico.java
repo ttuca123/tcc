@@ -1,11 +1,12 @@
 package br.com.home.configuracao;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.Test;
 
-import br.com.home.passos.Passos;
-import br.com.home.util.CasoDeTeste;
+/**
+ * @author Artur
+ * 
+ * Classe que será configurada para execução do serviço
+ *
+ */
 
 public class Servico {
 
@@ -14,25 +15,6 @@ public class Servico {
 	private String descricao;
 
 	private boolean isServicoUnico;
-
-
-	public Servico() {
-
-	}
-	
-
-	public Servico(String id, String descricao, boolean isServicoUnico) {
-
-		this.id = id;
-		this.descricao = descricao;
-		this.isServicoUnico = isServicoUnico;
-	}
-
-	
-
-	
-
-	
 
 	public String getId() {
 		return id;

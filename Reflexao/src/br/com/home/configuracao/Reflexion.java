@@ -3,6 +3,14 @@ package br.com.home.configuracao;
 import br.com.home.passos.Passos;
 import br.com.home.util.CasoDeTeste;
 
+/**
+ * 
+ * @author Artur Data 04/03/2017
+ * 
+ *         Classe criada com a finalidade de gerenciar a montagem e execução das
+ *         classes que utilizam Reflexion e Annotations para testes.
+ */
+
 public class Reflexion {
 
 	private Class<?> clazze;
@@ -25,7 +33,8 @@ public class Reflexion {
 
 	}
 
-	public void executarTeste(Servico servico) throws InstantiationException, IllegalAccessException {
+	@SuppressWarnings("rawtypes")
+	public void executar(Servico servico) throws InstantiationException, IllegalAccessException {
 
 		if (clazze != null && clazze.isAnnotationPresent(CasoDeTeste.class)) {
 
@@ -35,10 +44,10 @@ public class Reflexion {
 
 			for (Class<? extends Passos> clazze : clazzes) {
 
-				Passos rv = clazze.newInstance();
-				rv.realizarNavegacao(servico);
+				Passos passo = clazze.newInstance();
+				passo.iniciarNavegacao(servico);
+				passo.finalizarNavegacao(servico);
 
-				rv.realizarValidacao(servico);
 			}
 
 		}

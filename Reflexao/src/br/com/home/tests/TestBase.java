@@ -7,6 +7,15 @@ import org.junit.Test;
 import br.com.home.configuracao.Reflexion;
 import br.com.home.configuracao.Servico;
 
+/**
+ * 
+ * @author Artur
+ * Data 04/03/2017
+ * 
+ * Classe responsável pela generalização da execução dos testes
+ *
+ */
+
 public class TestBase {
 
 	private Class<?> clazze;
@@ -30,7 +39,7 @@ public class TestBase {
 	public void executar() {
 
 		try {
-			reflexion.executarTeste(servico);
+			reflexion.executar(servico);
 
 		} catch (InstantiationException e) {
 			e.printStackTrace();
