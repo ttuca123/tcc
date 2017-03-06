@@ -47,7 +47,6 @@ public class Reflexion {
 				Passos passo = clazze.newInstance();
 				passo.iniciarNavegacao(servico);
 				passo.finalizarNavegacao(servico);
-
 			}
 
 		}
