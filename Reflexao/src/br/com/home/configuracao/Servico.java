@@ -15,6 +15,26 @@ public class Servico {
 	private String descricao;
 
 	private boolean isServicoUnico;
+	
+	private boolean  gravaAtributoX;
+	
+	private boolean  gravaAtributoY;
+
+	public boolean isGravaAtributoX() {
+		return gravaAtributoX;
+	}
+
+	public void setGravaAtributoX(boolean gravaAtributoX) {
+		this.gravaAtributoX = gravaAtributoX;
+	}
+
+	public boolean isGravaAtributoY() {
+		return gravaAtributoY;
+	}
+
+	public void setGravaAtributoY(boolean gravaAtributoY) {
+		this.gravaAtributoY = gravaAtributoY;
+	}
 
 	public String getId() {
 		return id;

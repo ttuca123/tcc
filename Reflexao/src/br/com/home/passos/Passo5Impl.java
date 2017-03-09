@@ -4,17 +4,24 @@ import br.com.home.configuracao.Servico;
 
 public class Passo5Impl implements Passos {
 
-	public void iniciarNavegacao(Servico servico) {
+	public Servico iniciarNavegacao(Servico servico) {
 
 		System.out.println("Iniciar navegação pela página 5 com servico " + servico.getDescricao());
+		
+		servico.setGravaAtributoY(true);
+		servico.setGravaAtributoX(true);
+		
+		return servico;
 
 	}
 
 	@Override
-	public void finalizarNavegacao(Servico servico) {
+	public Servico finalizarNavegacao(Servico servico) {
 
 		System.out.println("Finalizar navegação pela página 5 com servico " + servico.getDescricao());
 
+		
+		return servico;
 	}
 
 }

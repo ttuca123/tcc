@@ -45,8 +45,8 @@ public class Reflexion {
 			for (Class<? extends Passos> clazze : clazzes) {
 
 				Passos passo = clazze.newInstance();
-				passo.iniciarNavegacao(servico);
-				passo.finalizarNavegacao(servico);
+				servico = passo.iniciarNavegacao(servico);
+				servico = passo.finalizarNavegacao(servico);
 			}
 
 		}

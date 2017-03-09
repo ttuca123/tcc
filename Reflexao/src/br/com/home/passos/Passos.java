@@ -3,10 +3,10 @@ package br.com.home.passos;
 import br.com.home.configuracao.Servico;
 import br.com.home.util.ValidacaoTeste;
 
-public interface Passos<E extends ValidacaoTeste> {
+public interface Passos {
 
-	public void iniciarNavegacao(Servico servico);
+	public Servico iniciarNavegacao(Servico servico);
 	
-	public void finalizarNavegacao(Servico servico);
+	public Servico finalizarNavegacao(Servico servico);
 
 }
