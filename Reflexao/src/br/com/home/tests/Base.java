@@ -16,7 +16,7 @@ import br.com.home.configuracao.Servico;
  *
  */
 
-public class TestBase {
+public class Base {
 
 	private Class<?> clazze;
 
@@ -24,13 +24,13 @@ public class TestBase {
 
 	private Reflexion reflexion;
 
-	public TestBase(Class<?> clazze) {
+	public Base(Class<?> clazze) {
 		this.clazze = clazze;
 
 	}
 
 	@Before
-	public void beforeClass() {
+	public void before() {
 		reflexion = new Reflexion();
 		servico = reflexion.configurar(clazze);
 	}
