@@ -2,7 +2,7 @@ package br.com.home.passos;
 
 import br.com.home.configuracao.Servico;
 
-public class Passo1Impl implements Passos {
+public class Passo1Impl implements Passo {
 
 	public Servico iniciarNavegacao(Servico servico) {
 

@@ -3,13 +3,13 @@ package br.com.home.test.categoria1;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.com.home.configuracao.Base;
 import br.com.home.configuracao.Servico;
 import br.com.home.passos.Passo1Impl;
 import br.com.home.passos.Passo2Impl;
+import br.com.home.passos.PassoContext;
 
-public class TesteServico1 {
-
-	Servico servico;
+public class TesteServico1 extends Base {
 
 	@Before
 	public void beforeClass() {
@@ -22,17 +22,17 @@ public class TesteServico1 {
 	@Test
 	public void executar() {
 
-		Passo1Impl passo1 = new Passo1Impl();
+		passoContext = new PassoContext(new Passo1Impl());
 
-		servico = passo1.iniciarNavegacao(servico);
+		servico = passoContext.iniciar(servico);
 
-		passo1.finalizarNavegacao(servico);
+		servico = passoContext.finalizar(servico);
 
-		Passo2Impl passo2 = new Passo2Impl();
+		passoContext = new PassoContext(new Passo2Impl());
 
-		passo2.iniciarNavegacao(servico);
+		servico = passoContext.iniciar(servico);
 
-		passo2.finalizarNavegacao(servico);
+		servico = passoContext.finalizar(servico);
 	}
 
 }
