@@ -6,13 +6,17 @@ import org.junit.Test;
 
 import br.com.home.configuracao.Reflexion;
 import br.com.home.configuracao.Servico;
+import br.com.home.exception.Excecao1;
+import br.com.home.exception.Excecao2;
+import br.com.home.exception.Excecao3;
+import br.com.home.exception.Excecao4;
+import br.com.home.exception.Excecao5;
 
 /**
  * 
- * @author Artur
- * Data 04/03/2017
+ * @author Artur Data 04/03/2017
  * 
- * Classe responsável pela generalização da execução dos testes
+ *         Classe responsável pela generalização da execução dos testes
  *
  */
 
@@ -47,7 +51,18 @@ public class Base {
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Excecao1 ex1) {
+			System.out.println("Realizar alguma ação para a exceção 1");
+		} catch (Excecao2 ex1) {
+			System.out.println("Realizar alguma ação para a exceção 2");
+		} catch (Excecao3 ex1) {
+			System.out.println("Realizar alguma ação para a exceção 3");
+		} catch (Excecao4 ex1) {
+			System.out.println("Realizar alguma ação para a exceção 4");
+		} catch (Excecao5 ex1) {
+			System.out.println("Realizar alguma ação para a exceção 5");
 		}
+
 	}
 
 	@After

@@ -1,5 +1,10 @@
 package br.com.home.configuracao;
 
+import br.com.home.exception.Excecao1;
+import br.com.home.exception.Excecao2;
+import br.com.home.exception.Excecao3;
+import br.com.home.exception.Excecao4;
+import br.com.home.exception.Excecao5;
 import br.com.home.passos.Passos;
 import br.com.home.util.CasoDeTeste;
 
@@ -34,7 +39,8 @@ public class Reflexion {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public void executar(Servico servico) throws InstantiationException, IllegalAccessException {
+	public void executar(Servico servico)
+			throws InstantiationException, IllegalAccessException, Excecao1, Excecao2, Excecao3, Excecao4, Excecao5 {
 
 		if (clazze != null && clazze.isAnnotationPresent(CasoDeTeste.class)) {
 
