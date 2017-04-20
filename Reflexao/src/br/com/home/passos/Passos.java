@@ -1,12 +1,9 @@
 package br.com.home.passos;
 
-import br.com.home.configuracao.Servico;
-import br.com.home.util.ValidacaoTeste;
+import br.com.home.configuracao.Salario;
 
 public interface Passos {
 
-	public Servico iniciarNavegacao(Servico servico);
+	public Salario executar(Salario salario);
 	
-	public Servico finalizarNavegacao(Servico servico);
-
 }

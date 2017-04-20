@@ -20,11 +20,13 @@ import br.com.home.passos.Passos;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CasoDeTeste {
-	String id() default "";
+	
 
-	String descricao() default "";
+	double salarioBruto() default 0.0;
+	
+	int numeroDependente() default 0;
 
-	boolean isServicoUnico() default true;
+	double outros() default 0.0;
 
 	Class<? extends Passos>[] passos();
 

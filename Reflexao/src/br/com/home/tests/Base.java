@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.com.home.configuracao.Reflexion;
-import br.com.home.configuracao.Servico;
+import br.com.home.configuracao.Salario;
 import br.com.home.exception.Excecao1;
 import br.com.home.exception.Excecao2;
 import br.com.home.exception.Excecao3;
@@ -24,7 +24,7 @@ public class Base {
 
 	private Class<?> clazze;
 
-	private Servico servico;
+	private Salario servico;
 
 	private Reflexion reflexion;
 
@@ -44,23 +44,10 @@ public class Base {
 
 		try {
 			reflexion.executar(servico);
-
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-
-		} catch (IllegalAccessException e) {
+			
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (Excecao1 ex1) {
-			System.out.println("Realizar alguma ação para a exceção 1");
-		} catch (Excecao2 ex1) {
-			System.out.println("Realizar alguma ação para a exceção 2");
-		} catch (Excecao3 ex1) {
-			System.out.println("Realizar alguma ação para a exceção 3");
-		} catch (Excecao4 ex1) {
-			System.out.println("Realizar alguma ação para a exceção 4");
-		} catch (Excecao5 ex1) {
-			System.out.println("Realizar alguma ação para a exceção 5");
 		}
 
 	}

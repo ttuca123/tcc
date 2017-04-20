@@ -20,27 +20,27 @@ public class Reflexion {
 
 	private Class<?> clazze;
 
-	public Servico configurar(Class<?> clazze) {
+	public Salario configurar(Class<?> clazze) {
 
 		this.clazze = clazze;
 
-		Servico servico = new Servico();
+		Salario salario = new Salario();
 
 		CasoDeTeste casoTeste = clazze.getDeclaredAnnotation(CasoDeTeste.class);
 
-		servico.setId(casoTeste.id());
-
-		servico.setDescricao(casoTeste.descricao());
-
-		servico.setServicoUnico(casoTeste.isServicoUnico());
-
-		return servico;
+		salario.setSalarioBruto(casoTeste.salarioBruto());
+		
+		salario.setOutros(casoTeste.outros());
+		
+		salario.setDependentes(casoTeste.numeroDependente());		
+		
+		return salario;
 
 	}
 
 	@SuppressWarnings("rawtypes")
-	public void executar(Servico servico)
-			throws InstantiationException, IllegalAccessException, Excecao1, Excecao2, Excecao3, Excecao4, Excecao5 {
+	public void executar(Salario servico) throws InstantiationException, IllegalAccessException
+			 {
 
 		if (clazze != null && clazze.isAnnotationPresent(CasoDeTeste.class)) {
 
@@ -51,8 +51,8 @@ public class Reflexion {
 			for (Class<? extends Passos> clazze : clazzes) {
 
 				Passos passo = clazze.newInstance();
-				servico = passo.iniciarNavegacao(servico);
-				servico = passo.finalizarNavegacao(servico);
+				servico = passo.executar(servico);
+				
 			}
 
 		}
