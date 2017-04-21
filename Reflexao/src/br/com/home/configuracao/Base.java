@@ -1,16 +1,8 @@
-package br.com.home.tests;
+package br.com.home.configuracao;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import br.com.home.configuracao.Reflexion;
-import br.com.home.configuracao.Salario;
-import br.com.home.exception.Excecao1;
-import br.com.home.exception.Excecao2;
-import br.com.home.exception.Excecao3;
-import br.com.home.exception.Excecao4;
-import br.com.home.exception.Excecao5;
 
 /**
  * 
@@ -44,7 +36,7 @@ public class Base {
 
 		try {
 			reflexion.executar(servico);
-			
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,7 +46,7 @@ public class Base {
 
 	@After
 	public void after() {
-		System.out.println("/*********Finalização do Teste*********/");
+		DriverUtil.getDriver().quit();
 	}
 
 }

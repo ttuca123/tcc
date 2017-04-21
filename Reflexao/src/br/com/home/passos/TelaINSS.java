@@ -34,7 +34,7 @@ public class TelaINSS implements Passos {
 		
 		
 		return Util.converterFormatoRealDouble(DriverUtil.getDriver()
-		.findElement(By.xpath(".//*[@id='calculator-result']/div[3]/table/tbody/tr[3]/td[3]"))
+		.findElement(By.xpath(".//*[@id='calculator-result']/div[3]/table/tbody/tr[2]/td[4]"))
 		.getText()).equals(salarioBruto*percentual)?true:false;
 		
 	}
