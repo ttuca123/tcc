@@ -16,7 +16,7 @@ public class Base {
 
 	private Class<?> clazze;
 
-	private Salario servico;
+	private Salario salario;
 
 	private Reflexion reflexion;
 
@@ -28,14 +28,14 @@ public class Base {
 	@Before
 	public void before() {
 		reflexion = new Reflexion();
-		servico = reflexion.configurar(clazze);
+		salario = reflexion.configurar(clazze);
 	}
 
 	@Test
 	public void executar() {
 
 		try {
-			reflexion.executar(servico);
+			reflexion.executar(salario);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
